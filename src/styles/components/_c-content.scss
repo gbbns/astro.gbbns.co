@@ -1,0 +1,120 @@
+@use "sass:math";
+.c-content {
+  display: grid;
+  p {
+    display: block;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  & + & {
+    margin-top: $base-spacing * 6;
+  }
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  &__title {
+    margin-bottom: $base-spacing * 1.5;
+    @media (min-width: 40em) {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      margin-bottom: $base-spacing * 3;
+    }
+  }
+
+  &__body {
+    @media (min-width: 40em) {
+      grid-column-start: 2;
+      grid-column-end: 9;
+    }
+
+    & + & {
+      overflow: visible;
+      margin: $base-spacing * 4 0 $base-spacing * 3;
+
+      &::before {
+        content: '...';
+        display: inline-block;
+        margin-left: 0.6em;
+        color: map-get(map-get($palette, divider), light);
+        position: relative;
+        top: -1.4rem;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.4rem;
+        letter-spacing: 1.2rem;
+        line-height: 1;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    p {
+      img {
+        max-width: 100%;
+        margin: 0 0 $base-spacing * 2 0;
+      }
+    }
+  }
+
+  &__meta {
+    margin: 0 0 $base-spacing * 2 0;
+
+    @media (min-width: 40em) {
+      margin-bottom: $base-spacing * 7;
+    }
+
+    &-items {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    &-item {
+      display: inline-block;
+      position: relative;
+
+      & + & {
+        margin-left: $base-spacing * 2;
+
+        &:before {
+          content: '•';
+          position: absolute;
+          left: -($base-spacing * 1.5);
+        }
+      }
+    }
+
+    &-tag {
+      background: map-get(map-get($palette, nav-links), dark);
+      color: map-get(map-get($palette, tags), light);
+      display: inline-block;
+      padding: math.div($base-spacing, 1.5) $base-spacing * 1.5;
+      border-radius: $base-spacing * 1.5;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      width: max-content;
+      font-weight: bold;
+
+      &:hover {
+        background: map-get(map-get($palette, tags), light);
+        color: map-get(map-get($palette, nav-links), dark);
+      }
+    }
+
+    &-tags {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    &-tags-item {
+      display: inline-block;
+      position: relative;
+
+      & + & {
+        margin-left: $base-spacing;
+      }
+    }
+  }
+}

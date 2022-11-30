@@ -1,0 +1,58 @@
+@use 'sass:math';
+.c-colophon {
+  grid-area: colophon;
+  margin-top: $base-spacing * 4;
+
+  @media (min-width: 40em) {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: var(--h4);
+    margin-bottom: 0;
+
+    a {
+      color: map-get(map-get($palette, nav-links), light);
+    }
+  }
+  &__link {
+    color: map-get(map-get($palette, nav-links), light);
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+    transition: 0.15s all;
+    text-decoration: none;
+
+    &:hover {
+      color: map-get(map-get($palette, nav-links), light);
+    }
+
+    &.is-active {
+      color: map-get(map-get($palette, nav-links), light);
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &::before {
+      color: map-get(map-get($palette, divider), light);
+      content: '-';
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+  }
+
+  &__items {
+    font-size: 1rem;
+    margin-bottom: math.div($base-spacing, 3);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
