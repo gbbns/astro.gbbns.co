@@ -1,0 +1,40 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+console.log("path: ", pathname);
+const currentPath = pathname.slice(1); // remove the first "/"
+console.log("current path: ", currentPath);
+---
+
+  <header class='o-content__sidebar'>
+    <a class="c-masthead" href="/">
+      <span class="c-masthead__item" aria-hidden="true">gbbns.co</span>
+      <span class="c-masthead__item">Chris Gibbons</span>
+      <span class="c-masthead__item">
+        <span aria-hidden="true">/&nbsp;</span>UX Technologist</span>
+      </a>
+
+    <nav class='c-navigaton'>
+      <ul class='c-navigation__primary'>
+        <li>
+          <a href='/about' class={currentPath === "about" ? "c-navigation__link is-active" : "c-navigation__link"}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href='/writing' class={currentPath === "writing" ? "c-navigation__link is-active" : "c-navigation__link"}>
+            Writing
+          </a>
+        </li>
+        <li>
+          <a href='/speaking' class={currentPath === "speaking" ? "c-navigation__link is-active" : "c-navigation__link"}>
+            Speaking
+          </a>
+        </li>
+        <li>
+          <a href='/contact' class={currentPath === "contact" ? "c-navigation__link is-active" : "c-navigation__link"}>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
