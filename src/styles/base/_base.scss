@@ -104,7 +104,7 @@ h5 {
 a {
   color: map-get(map-get($palette, links), light);
   font-weight: 900;
-  transition: 0.15s all;
+  transition: 0.15s color;
   text-decoration: none;
 
   &:visited {
