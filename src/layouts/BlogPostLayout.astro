@@ -1,0 +1,58 @@
+---
+import Header from '../components/Header.astro'
+import Colophon from '../components/Colophon.astro'
+import Footer from '../components/Footer.astro'
+
+import { format } from 'date-fns'
+import readingTime from 'reading-time'
+
+import '../styles/main.scss'
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+const { content } = Astro.props
+console.log('Content: ', Astro.props)
+const stats = readingTime(Astro.props.rawContent())
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="true"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="o-content">
+      <Header />
+      <Colophon />
+      <section class="o-content__body">
+        <h1>{content.title}</h1>
+        <p class="c-content__meta-item">
+          Author: {content.author}
+          <span class="c-content__meta-items">
+            {format(new Date(content.date), 'MMMM dd, yyyy')} - approx.{
+              stats.minutes > 1 ? Math.ceil(stats.minutes) : 1
+            } min read
+          </span>
+        </p>
+        <slot />
+      </section>
+      <Footer />
+    </main>
+  </body>
+</html>" >
