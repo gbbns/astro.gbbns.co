@@ -1,10 +1,77 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Welcome to gbbns.co">
-  <main>
-    <h1>Colophon</h1>
-  </main>
+  <section class="c-content">
+    <div class="c-content__title">
+      <h1>Colophon for gbbns.co</h1>
+    </div>
+    <div class="c-content__body">
+      <p>
+        In true developer fashion I&rsquo;ve used a variety of setups over the
+        years to build this site.
+      </p>
+      <p>
+        This is currently the fifth iteration of this site, every version has
+        served a purpose, and served it very well. I&rsquo; ported the site to
+        be powered by{' '}
+        <a href="https://astro.build" rel="noopener" class="c-colophon__link">
+          Astro
+        </a>
+        .
+      </p>
+      <p>
+        Gatsby was great, as was NextJS (apart from _all_ the issues I had
+        trying to verison upgrade). The site hasn&rsquo;t got all the features
+        in yet, and there might be the odd UI glitch, but I&rsquo;m sure it
+        won&rsquo;t be long before it&rsquo;s all here.
+      </p>
+      <p>
+        Here&rsquo;s a short history of <a href="/">gbbns.co</a>
+      </p>
+      <ul>
+        <li>
+          v1. was developed using{' '}
+          <a href="https://atom.io" rel="noopener"> Atom</a>
+          , generated with{' '}
+          <a href="https://jekyllrb.com/" rel="noopener"> Jekyll</a>
+          .
+        </li>
+        <li>
+          v2. generated with{' '}
+          <a href="https://gohugo.io/" rel="noopener"> Hugo</a>
+          .
+        </li>
+        <li>
+          v3 generated with{' '}
+          <a href="https://www.gatsbyjs.org/" rel="noopener"> Gatsby</a>
+        </li>
+        <li>
+          v4 generated with{' '}
+          <a href="https://nextjs.org/" rel="noopener"> Next.js</a>
+        </li>
+        <li>
+          v5 (current) generated with{' '}
+          <a href="https://astro.build/" rel="noopener">Astro</a>
+        </li>
+      </ul>
+      <p>
+        The site is developed using{' '}
+        <a href="https://code.visualstudio.com/" rel="noopener">
+          Visual Studio Code
+        </a>
+        , hosted on{' '}
+        <a href="https://github.com/gbbns/gatsby.gbbns.co" rel="noopener">
+          GitHub
+        </a>{' '}
+        and published to{' '}
+        <a href="https://www.netlify.com/" rel="noopener"> Netlify</a>
+      </p>
+      <p>There are no cookies served, no tracking, and no ads, ever.</p>
+      <p>
+        I will keep this page updated as/when I make more changes to the site.
+      </p>
+    </div>
+  </section>
 </Layout>
