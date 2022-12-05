@@ -4,15 +4,15 @@
 
 **My website!**
 
-* Author: [Chris Gibbons](https://gbbns.co)
-* Source: [github.com/gbbns/gbbns.co](https://github.com/gbbns/astro.gbbns.co)
-* Issues and Suggestions: [github.com/gbbns/gbbns.co/issues](https://github.com/gbbns/astro.gbbns.co/issues)
-* Twitter: [@_gbbns](https://twitter.com/_gbbns)
-* Email: [chris@gbbns.co](mailto:chris@gbbns.co)
-* Trello Life List [https://bit.ly/gbbns-life-list](https://bit.ly/gbbns-life-list)
-* Instagram: [_gbbns](https://instagram.com/_gbbns)
+- Author: [Chris Gibbons](https://gbbns.co)
+- Source: [github.com/gbbns/gbbns.co](https://github.com/gbbns/astro.gbbns.co)
+- Issues and Suggestions: [github.com/gbbns/gbbns.co/issues](https://github.com/gbbns/astro.gbbns.co/issues)
+- Twitter: [@\_gbbns](https://twitter.com/_gbbns)
+- Email: [chris@gbbns.co](mailto:chris@gbbns.co)
+- Trello Life List [https://bit.ly/gbbns-life-list](https://bit.ly/gbbns-life-list)
+- Instagram: [\_gbbns](https://instagram.com/_gbbns)
 
-***
+---
 
 ## About
 
