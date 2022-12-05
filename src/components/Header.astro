@@ -1,7 +1,7 @@
 ---
 const pathname = new URL(Astro.request.url).pathname
 console.log(Astro)
-const currentPath = pathname.slice(1) // remove the first "/"
+let currentPath = pathname.slice(1) // remove the first "/"
 console.log(currentPath.replace(/\/$/, ''))
 ---
 
