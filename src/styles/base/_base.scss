@@ -209,12 +209,6 @@ hr {
   }
 }
 
-@media screen and (prefers-reduced-motion: no-preference) {
-  html {
-    --transition-standard: all ease 0.3s;
-  }
-}
-
 small,
 .text_small {
   font-size: 0.75rem;
