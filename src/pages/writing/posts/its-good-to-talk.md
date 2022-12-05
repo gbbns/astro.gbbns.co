@@ -1,7 +1,7 @@
 ---
 categories: "personal"
 tags: ["work", "personal", "motivation"]
-published: false
+published: true
 title: "It's good to talk"
 date: '2022-04-04T05:20:26Z'
 description: ""
