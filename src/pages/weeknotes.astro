@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import { format } from 'date-fns'
+
+let allPosts = await Astro.glob('../pages/weeknotes/*.md')
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+)
+const posts = allPosts.filter((post) => post.frontmatter.published)
+
+import { siteMetaData } from '../data/siteMetaData.mjs'
+---
+
+<Layout title="Welcome to gbbns.co">
+  <section class="c-content">
+    <div class="c-content__title">
+      <h1 class="t-hero--home">Weeknotes</h1>
+    </div>
+    <div class="c-content__body">
+      <ul>
+        {
+          posts &&
+            posts.map((post) => (
+              <li>
+                <a href={'/weeknotes/' + post.frontmatter.slug}>
+                  {post.frontmatter.title}
+                </a>
+                <p class="text-sm">
+                  {format(new Date(post.frontmatter.date), 'MMMM dd, yyyy')}
+                </p>
+              </li>
+            ))
+        }
+      </ul>
+    </div>
+  </section>
+</Layout>
