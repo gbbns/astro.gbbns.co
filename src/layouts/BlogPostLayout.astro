@@ -13,7 +13,6 @@ export interface Props {
 
 const { title } = Astro.props
 const { content } = Astro.props
-console.log('Content: ', Astro.props)
 const stats = readingTime(Astro.props.rawContent())
 ---
 
