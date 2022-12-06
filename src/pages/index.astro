@@ -1,33 +1,77 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { siteMetaData } from "../data/siteMetaData.mjs";
+import Layout from '../layouts/Layout.astro'
+import { siteMetaData } from '../data/siteMetaData.mjs'
+
+import { format } from 'date-fns'
+
+let allPosts = await Astro.glob('../pages/writing/posts/*.md')
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+)
+const posts = allPosts.filter((post) => post.frontmatter.published)
 ---
 
 <Layout title="Welcome to gbbns.co">
-  <section class='c-content'>
-    <div class='c-content__title'>
-      <h1 class='t-hero--home'>
+  <section class="c-content">
+    <div class="c-content__title">
+      <h1 class="t-hero--home">
         {siteMetaData.siteHomePageIntroTitle}
       </h1>
     </div>
-    <div class='c-content__body'>
-      <p><strong>Chris Gibbons</strong> is an experienced and passionate digital developer based in <a href='https://en.wikipedia.org/wiki/Lancashire' rel='noopener'> Lancashire [53&deg; 48&rsquo; 57.1824&rdquo; N, 3&deg; 3&rsquo; 19.0476&rdquo; W], UK, </a> specialising in the &ldquo;lost art&rdquo; of traditional front-end development practises.</p>
-      <p>Sitting somewhere in the murky waters between design, front-end &amp; engineering, I strongly advocate for the use of design systems and spend large parts of my time rambling on about the use of &ldquo;proper semantics&rdquo; and <a href='https://knowyourmeme.com/memes/old-man-yells-at-cloud' rel='noopener'>shouting at clouds</a>, all to help feed a long time obsession for well written, semantic &amp; accessible code, to help deliver cross-device, compliant, usable websites which are accessible &amp; inclusive.</p>
-      <p>My career has been spent working for some of the biggest names&mdash;both agency and in-house&mdash;in Manchester. During this time I have been fortunate to have the chance to work on large scale, content-managed platforms for some of the largest companies in the UK.</p>
-      <p>In my spare time I&rsquo;m a new convert to cycling, occasionally <a href="#">write</a>, and try to <a href='https://www.instagram.com/_gbbns' rel='noopener'>take nice pictures</a>.</p>
+    <div class="c-content__body">
+      <p>
+        <strong>Chris Gibbons</strong> is an experienced and passionate digital developer
+        based in <a
+          href="https://en.wikipedia.org/wiki/Lancashire"
+          rel="noopener"
+        >
+          Lancashire [53&deg; 48&rsquo; 57.1824&rdquo; N, 3&deg; 3&rsquo;
+          19.0476&rdquo; W], UK,
+        </a> specialising in the &ldquo;lost art&rdquo; of traditional front-end
+        development practises.
+      </p>
+      <p>
+        Sitting somewhere in the murky waters between design, front-end &amp;
+        engineering, I strongly advocate for the use of design systems and spend
+        large parts of my time rambling on about the use of &ldquo;proper
+        semantics&rdquo; and <a
+          href="https://knowyourmeme.com/memes/old-man-yells-at-cloud"
+          rel="noopener">shouting at clouds</a
+        >, all to help feed a long time obsession for well written, semantic
+        &amp; accessible code, to help deliver cross-device, compliant, usable
+        websites which are accessible &amp; inclusive.
+      </p>
+      <p>
+        My career has been spent working for some of the biggest
+        names&mdash;both agency and in-house&mdash;in Manchester. During this
+        time I have been fortunate to have the chance to work on large scale,
+        content-managed platforms for some of the largest companies in the UK.
+      </p>
+      <p>
+        In my spare time I&rsquo;m a new convert to cycling, occasionally <a
+          href="#">write</a
+        >, and try to <a href="https://www.instagram.com/_gbbns" rel="noopener"
+          >take nice pictures</a
+        >.
+      </p>
       <hr />
       <h2>Latest posts</h2>
-            <!-- {heroPost && (
-              <HeroPost
-                title={heroPost.title}
-                coverImage={heroPost.coverImage}
-                date={heroPost.date}
-                author={heroPost.author}
-                slug={heroPost.slug}
-                excerpt={heroPost.excerpt}
-              />
-            )}
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />} -->
+
+      {
+        posts &&
+          posts.slice(0, 3).map((post) => (
+            <li>
+              <a href={'/writing/posts/' + post.frontmatter.slug}>
+                {post.frontmatter.title}
+              </a>
+              <p class="text-sm">
+                {format(new Date(post.frontmatter.date), 'MMMM dd, yyyy')}
+              </p>
+            </li>
+          ))
+      }
     </div>
   </section>
 </Layout>
