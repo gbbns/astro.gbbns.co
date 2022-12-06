@@ -58,20 +58,21 @@ const posts = allPosts.filter((post) => post.frontmatter.published)
       </p>
       <hr />
       <h2>Latest posts</h2>
-
-      {
-        posts &&
-          posts.slice(0, 3).map((post) => (
-            <li>
-              <a href={'/writing/posts/' + post.frontmatter.slug}>
-                {post.frontmatter.title}
-              </a>
-              <p class="text-sm">
-                {format(new Date(post.frontmatter.date), 'MMMM dd, yyyy')}
-              </p>
-            </li>
-          ))
-      }
+      <ul>
+        {
+          posts &&
+            posts.slice(0, 3).map((post) => (
+              <li>
+                <a href={'/writing/posts/' + post.frontmatter.slug}>
+                  {post.frontmatter.title}
+                </a>
+                <p class="text-sm">
+                  {format(new Date(post.frontmatter.date), 'MMMM dd, yyyy')}
+                </p>
+              </li>
+            ))
+        }
+      </ul>
     </div>
   </section>
 </Layout>
