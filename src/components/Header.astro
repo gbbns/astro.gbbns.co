@@ -1,8 +1,16 @@
 ---
 const pathname = new URL(Astro.request.url).pathname
-console.log(Astro)
-let currentPath = pathname.slice(1) // remove the first "/"
-console.log(currentPath.replace(/\/$/, ''))
+
+let currentPath = Astro.url.pathname
+currentPath = currentPath.startsWith('/')
+  ? currentPath.substring(1)
+  : currentPath
+currentPath = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath
+
+// console.log('Path: ', currentPath)
+// // console.log(Astro)
+// let currentPath = pathname.slice(1) // remove the first "/"
+// console.log(currentPath.replace(/\/$/, ''))
 ---
 
 <p>{currentPath}</p>
@@ -21,7 +29,7 @@ console.log(currentPath.replace(/\/$/, ''))
       <li>
         <a
           href="/about"
-          class={currentPath === 'about'
+          class={currentPath.toLowerCase().includes('about')
             ? 'c-navigation__link is-active'
             : 'c-navigation__link'}
         >
@@ -31,7 +39,7 @@ console.log(currentPath.replace(/\/$/, ''))
       <li>
         <a
           href="/writing"
-          class={currentPath === 'writing'
+          class={currentPath.toLowerCase().includes('writing')
             ? 'c-navigation__link is-active'
             : 'c-navigation__link'}
         >
@@ -41,7 +49,7 @@ console.log(currentPath.replace(/\/$/, ''))
       <li>
         <a
           href="/weeknotes"
-          class={currentPath === 'weeknotes'
+          class={currentPath.toLowerCase().includes('weeknotes')
             ? 'c-navigation__link is-active'
             : 'c-navigation__link'}
         >
@@ -51,7 +59,7 @@ console.log(currentPath.replace(/\/$/, ''))
       <li>
         <a
           href="/speaking"
-          class={currentPath === 'speaking'
+          class={currentPath.toLowerCase().includes('speaking')
             ? 'c-navigation__link is-active'
             : 'c-navigation__link'}
         >
@@ -61,7 +69,7 @@ console.log(currentPath.replace(/\/$/, ''))
       <li>
         <a
           href="/contact"
-          class={currentPath === 'contact'
+          class={currentPath.toLowerCase().includes('contact')
             ? 'c-navigation__link is-active'
             : 'c-navigation__link'}
         >
