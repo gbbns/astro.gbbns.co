@@ -11,14 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.6.11",
-    "sass": "^1.56.1",
-    "stylelint": "^14.15.0",
-    "stylelint-config-recommended-scss": "^8.0.0",
-    "stylelint-config-standard": "^29.0.0",
+    "@astrojs/rss": "^1.0.3",
+    "astro": "^1.6.13",
     "date-fns": "^2.29.3",
-    "prettier": "^2.8.0",
+    "prettier": "^2.8.1",
     "prettier-plugin-astro": "^0.7.0",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "sass": "^1.56.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
