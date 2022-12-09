@@ -40,16 +40,22 @@ const stats = readingTime(Astro.props.rawContent())
       <Header />
       <Colophon />
       <section class="o-content__body">
-        <h1>{content.title}</h1>
-        <p class="c-content__meta-item">
-          Author: {content.author}
-          <span class="c-content__meta-items">
-            {format(new Date(content.date), 'MMMM dd, yyyy')} - approx.{
-              stats.minutes > 1 ? Math.ceil(stats.minutes) : 1
-            } min read
-          </span>
-        </p>
-        <slot />
+        <section class="c-content">
+          <div class="c-content__title">
+            <h1 class="t-hero--home">{content.title}</h1>
+          </div>
+          <div class="c-content__body">
+            <p class="c-content__meta-item">
+              Author: {content.author}
+              <span class="c-content__meta-items">
+                {format(new Date(content.date), 'MMMM dd, yyyy')} - approx.{
+                  stats.minutes > 1 ? Math.ceil(stats.minutes) : 1
+                } min read
+              </span>
+            </p>
+            <slot />
+          </div>
+        </section>
       </section>
       <Footer />
     </main>
