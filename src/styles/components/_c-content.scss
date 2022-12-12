@@ -26,6 +26,7 @@
   }
 
   &__body {
+    max-width: 80ch;
     @media (min-width: 40em) {
       grid-column-start: 2;
       grid-column-end: 9;
@@ -67,6 +68,7 @@
     }
 
     &-items {
+      display: block;
       margin-left: 0;
       padding-left: 0;
     }
@@ -81,7 +83,7 @@
         &:before {
           content: '•';
           position: absolute;
-          left: -($base-spacing * 1.5);
+          left: -($base-spacing * 1.75);
         }
       }
     }

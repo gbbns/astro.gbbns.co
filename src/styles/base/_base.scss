@@ -66,7 +66,7 @@ html {
 body {
   background: map-get(map-get($palette, background), light);
   color: map-get(map-get($palette, copy), light);
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   margin: 0 auto;
   padding: 0 $base-spacing * 3;
@@ -185,7 +185,7 @@ p {
 
   &:first-of-type {
     color: map-get(map-get($palette, copy), light);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     margin-top: 0;
     margin-bottom: $base-spacing * 2;
   }

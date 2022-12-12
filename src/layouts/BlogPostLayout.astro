@@ -49,12 +49,13 @@ const stats = readingTime(Astro.props.rawContent())
             <h1 class="t-hero--home">{content.title}</h1>
           </div>
           <div class="c-content__body">
-            <p class="c-content__meta-item">
-              Author: {content.author}
-              <span class="c-content__meta-items">
-                {format(new Date(content.date), 'MMMM dd, yyyy')} - approx.{
-                  stats.minutes > 1 ? Math.ceil(stats.minutes) : 1
-                } min read
+            <p class="c-content__meta-items">
+              <span class="c-content__meta-item">by {content.author}</span>
+              <span class="c-content__meta-item"
+                >posted {format(new Date(content.date), 'MMMM dd, yyyy')}</span
+              >
+              <span class="c-content__meta-item"
+                >approx.{stats.minutes > 1 ? Math.ceil(stats.minutes) : 1} min read
               </span>
             </p>
             <slot />
