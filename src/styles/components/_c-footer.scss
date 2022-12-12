@@ -5,4 +5,12 @@
   @media (min-width: 40em) {
     margin: $base-spacing * 6 0;
   }
+
+  p {
+    font-size: var(--t-base);
+    &:first-of-type,
+    &:last-of-type {
+      font-weight: normal;
+    }
+  }
 }

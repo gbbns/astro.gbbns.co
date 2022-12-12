@@ -23,6 +23,9 @@
       grid-column-end: 9;
       margin-bottom: $base-spacing * 3;
     }
+    p {
+      font-weight: normal;
+    }
   }
 
   &__body {
