@@ -47,8 +47,6 @@ const stats = readingTime(Astro.props.rawContent())
         <section class="c-content">
           <div class="c-content__title">
             <h1 class="t-hero--home">{content.title}</h1>
-          </div>
-          <div class="c-content__body">
             <p class="c-content__meta-items">
               <span class="c-content__meta-item">by {content.author}</span>
               <span class="c-content__meta-item"
@@ -58,6 +56,8 @@ const stats = readingTime(Astro.props.rawContent())
                 >approx.{stats.minutes > 1 ? Math.ceil(stats.minutes) : 1} min read
               </span>
             </p>
+          </div>
+          <div class="c-content__body">
             <slot />
           </div>
         </section>

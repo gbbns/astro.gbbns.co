@@ -35,4 +35,8 @@
 .t-hero--home {
   font-size: clamp(2rem, 2rem + 2.25vw, var(--h2));
   max-width: none;
+
+  + p {
+    font-size: 1.125rem;
+  }
 }
