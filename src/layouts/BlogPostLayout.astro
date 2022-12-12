@@ -44,7 +44,9 @@ const stats = readingTime(Astro.props.rawContent())
             <p class="c-content__meta-items">
               <span class="c-content__meta-item">by {content.author}</span>
               <span class="c-content__meta-item"
-                >posted {format(new Date(content.date), 'MMMM dd, yyyy')}</span
+                >posted {
+                  format(new Date(content.date), 'iiii do LLLL yyyy')
+                }</span
               >
               <span class="c-content__meta-item"
                 >approx.{stats.minutes > 1 ? Math.ceil(stats.minutes) : 1} min read
@@ -59,4 +61,4 @@ const stats = readingTime(Astro.props.rawContent())
       <Footer />
     </main>
   </body>
-</html>" >
+</html>

@@ -10,7 +10,6 @@ allPosts = allPosts.sort(
     new Date(a.frontmatter.date).valueOf()
 )
 const posts = allPosts.filter((post) => post.frontmatter.published)
-
 import { siteMetaData } from '../data/siteMetaData.mjs'
 ---
 
@@ -33,8 +32,8 @@ import { siteMetaData } from '../data/siteMetaData.mjs'
                 <a href={'/weeknotes/' + post.frontmatter.slug}>
                   {post.frontmatter.title}
                 </a>
-                <p class="text-sm">
-                  {format(new Date(post.frontmatter.date), 'MMMM dd, yyyy')}
+                <p>
+                  {format(new Date(post.frontmatter.date), 'iiii do LLLL yyyy')}
                 </p>
               </li>
             ))
