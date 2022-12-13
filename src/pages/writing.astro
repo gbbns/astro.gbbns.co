@@ -21,15 +21,18 @@ import { siteMetaData } from '../data/siteMetaData.mjs'
       <p>A complete list of articles posted:</p>
     </div>
     <div class="c-content__body">
-      <ul>
+      <ul class="h-list">
         {
           posts &&
             posts.map((post) => (
-              <li>
-                <a href={'/writing/posts/' + post.frontmatter.slug}>
+              <li class="h-list__item c-content__meta-items">
+                <a
+                  href={'/writing/posts/' + post.frontmatter.slug}
+                  class="c-content__meta-item"
+                >
                   {post.frontmatter.title}
                 </a>
-                <p class="text-sm">
+                <p class="c-content__meta-item">
                   {format(new Date(post.frontmatter.date), 'iiii do LLLL yyyy')}
                 </p>
               </li>
