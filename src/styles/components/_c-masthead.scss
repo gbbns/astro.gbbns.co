@@ -33,7 +33,7 @@
 }
 
 .t-hero--home {
-  font-size: clamp(2rem, 2rem + 2.25vw, var(--h2));
+  font-size: clamp(2rem, 2rem + 2.25vw, var(--h1-xl));
   max-width: none;
 
   + p {
