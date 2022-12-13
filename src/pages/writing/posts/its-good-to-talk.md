@@ -28,6 +28,8 @@ If this does trigger somebody, or if anyone wants to chat with me to discuss my 
 
 Several years ago I hit this very problem, and it's taken until now (for context it was back in 2016 for this part of the story) for me to speak up about it.
 
+----
+
 ### **I (nearly) realised, but I never followed it up**
 
 In 2014 I'd hit an all-time low with 'the internet', to the point where I was ready to completely jack it all in and change my career, I even attended uni open-days
@@ -36,13 +38,17 @@ I don't know when, or what triggered this, but looking back it was a combination
 It was worrying feeling like this, especially as I didn't truly understand why. The 'eureka' moment came during one of the sessions [Burnout Is Real And It's Coming To Get You](https://www.slideshare.net/richardadalton/burnout-in-software-development) at [DDD North](https://www.dddnorth.co.uk/).
 The content struck a chord and resonated with some of the issues I'd been facing.
 
-![fatigue, self criticism, irritability, negativity, sleep issues, neglect of health, feeling helpless, depression](https://image.slidesharecdn.com/burnoutppt-141019170338-conversion-gate01/85/burnout-in-software-development-11-320.jpg)
-Slide 11 of Richard's talk showing suggested symptoms of burnout
+<figure>
+<img src="https://image.slidesharecdn.com/burnoutppt-141019170338-conversion-gate01/85/burnout-in-software-development-11-320.jpg" alt="fatigue, self criticism, irritability, negativity, sleep issues, neglect of health, feeling helpless, depression" style="width:100%">
+<figcaption align = "center"><b>Slide 11 of Richard's talk showing suggested symptoms of burnout</b></figcaption>
+</figure>
 
 I remember being sat next to a few developers on the day, and to say they were cynical of this was an understatement. It's easy to judge folk when you're not in that situation, but the lack of empathy shown from these seasoned developers was shocking.
 
-![Unclear/demanding expectations of yourself. Too many responsibilities. Perfectionism. Not enough sleep or relaxation. Sustained pressure.](https://image.slidesharecdn.com/burnoutppt-141019170338-conversion-gate01/85/burnout-in-software-development-15-320.jpg)
-Slide 15 of Richard's talk showing suggested causes of burnout
+<figure>
+<img src="https://image.slidesharecdn.com/burnoutppt-141019170338-conversion-gate01/85/burnout-in-software-development-15-320.jpg" alt="Unclear/demanding expectations of yourself. Too many responsibilities. Perfectionism. Not enough sleep or relaxation. Sustained pressure." style="width:100%">
+<figcaption align = "center"><b>Slide 15 of Richard's talk showing suggested causes of burnout</b></figcaption>
+</figure>
 
 On the train back home I started to think about what [Richard](https://twitter.com/richardadalton) had talked about, and then for the first time in what seemed like an age I got my notebook out and started to scribble notes down.
 
