@@ -80,7 +80,7 @@ h5 {
 }
 
 h1 {
-  font-size: clamp(2rem, calc(2rem + 2.25vw), var(--h1));
+  font-size: clamp(2rem, 2rem + 2vw, var(--h1));
   line-height: 1.2;
   margin-top: 0;
 }
