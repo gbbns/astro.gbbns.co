@@ -8,6 +8,6 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://gbbns.co',
+  site: 'https://www.gbbns.co',
   integrations: [mdx(), sitemap()],
 })

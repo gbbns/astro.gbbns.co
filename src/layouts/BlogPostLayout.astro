@@ -14,6 +14,8 @@ export interface Props {
 const { title } = Astro.props
 const { content } = Astro.props
 const stats = readingTime(Astro.props.rawContent())
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!DOCTYPE html>
@@ -29,7 +31,7 @@ const stats = readingTime(Astro.props.rawContent())
       type="font/woff2"
       crossorigin
     />
-
+    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
