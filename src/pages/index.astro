@@ -63,7 +63,7 @@ const posts = allPosts.filter((post) => post.frontmatter.published)
           posts &&
             posts.slice(0, 3).map((post) => (
               <li>
-                <a href={'/writing/posts/' + post.frontmatter.slug}>
+                <a href={`/writing/posts/${post.frontmatter.slug}/`}>
                   {post.frontmatter.title}
                 </a>
                 <p class="text-sm">

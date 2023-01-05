@@ -27,7 +27,7 @@ import { siteMetaData } from '../data/siteMetaData.mjs'
             posts.map((post) => (
               <li class="h-list__item c-content__meta-items">
                 <a
-                  href={'/writing/posts/' + post.frontmatter.slug}
+                  href={`/writing/posts/${post.frontmatter.slug}/`}
                   class="c-content__meta-item"
                 >
                   {post.frontmatter.title}
