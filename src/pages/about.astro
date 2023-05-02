@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { siteMetaData } from '../data/siteMetaData.mjs'
 ---
 
 <Layout title="Welcome to gbbns.co">
   <section class="c-content">
     <div class="c-content__title">
-      <h1 class="t-hero--home">About this chap called Chris Gibbons</h1>
+      <h1 class="t-hero--home">
+        About this chap called {siteMetaData.author.name}
+      </h1>
     </div>
     <div class="c-content__body">
       <h2>What I do</h2>
@@ -29,12 +32,11 @@ import Layout from '../layouts/Layout.astro'
       <hr />
       <h2>A potted history</h2>
       <p>
-        Chris Gibbons is an experienced and passionate digital developer
-        specialising in the &ldquo;lost art&rdquo; of traditional front-end
-        development practises, UI/UX and mobile, with a long time obsession for
-        well written, semantic &amp; accessible code to help deliver
-        cross-device, compliant, usable websites which are accessible &amp;
-        inclusive.
+        {siteMetaData.author.name} is an experienced and passionate digital developer
+        specialising in the &ldquo;lost art&rdquo; of traditional front-end development
+        practises, UI/UX and mobile, with a long time obsession for well written,
+        semantic &amp; accessible code to help deliver cross-device, compliant, usable
+        websites which are accessible &amp; inclusive.
       </p>
       <p>
         He sits somewhere in the murky waters between design, front-end &amp;

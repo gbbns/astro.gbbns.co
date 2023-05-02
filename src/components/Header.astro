@@ -1,4 +1,6 @@
 ---
+import { siteMetaData } from '../data/siteMetaData.mjs'
+
 let currentPath = Astro.url.pathname
 currentPath = currentPath.startsWith('/')
   ? currentPath.substring(1)
@@ -8,12 +10,12 @@ currentPath = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath
 
 <header class="o-content__sidebar">
   <a class="c-masthead" href="/">
-    <span class="c-masthead__item">Chris Gibbons</span>
+    <span class="c-masthead__item">{siteMetaData.author.name}</span>
     <span class="c-masthead__item">
       <span aria-hidden="true">//&nbsp;</span>
-      UX Technologist</span
+      {siteMetaData.siteTitle}</span
     >
-    <span class="c-masthead__item">gbbns.co</span>
+    <span class="c-masthead__item">{siteMetaData.siteUrlSlug}</span>
   </a>
 
   <nav class="c-navigation">
