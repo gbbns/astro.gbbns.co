@@ -14,6 +14,7 @@ export const siteMetaData = {
 
   author: {
     name: `Chris Gibbons`,
+    firstName: 'Chris',
     email: `chris@gbbns.co`,
     image: `/static/images/profile/chris-gibbons.jpeg`,
   },
