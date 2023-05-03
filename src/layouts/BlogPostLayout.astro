@@ -40,8 +40,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
       <Header />
       <Colophon />
       <section class="o-content__body">
-        <section class="c-content">
-          <div class="c-content__title">
+        <div class="c-content">
+          <header class="c-content__title">
             <h1 class="t-hero--home">{content.title}</h1>
             <p class="c-content__meta-items">
               <span class="c-content__meta-item">by {content.author}</span>
@@ -54,11 +54,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
                 >approx.{stats.minutes > 1 ? Math.ceil(stats.minutes) : 1} min read
               </span>
             </p>
-          </div>
-          <div class="c-content__body">
+          </header>
+          <article class="c-content__body">
             <slot />
-          </div>
-        </section>
+          </article>
+        </div>
       </section>
       <Footer />
     </main>
