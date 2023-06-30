@@ -5,7 +5,7 @@ const writingCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
     title: z.string(),
-    publishDate: z.string(),
+    pubDate: z.string(),
     author: z.string().default('Anonymous'),
   }),
 })
@@ -14,7 +14,7 @@ const weeknotesCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
     title: z.string(),
-    publishDate: z.string(),
+    pubDate: z.string(),
     author: z.string().default('Anonymous'),
   }),
 })

@@ -11,7 +11,7 @@ export async function get(context) {
     site: context.site,
     items: weeknotes.map((post) => ({
       title: post.data.title,
-      publishDate: post.data.publishDate,
+      pubDate: post.data.pubDate,
       description:
         post.data.description || post.data.excerpt || post.data.content || '',
       customData: `<language>en-GB</language>`,
@@ -21,7 +21,7 @@ export async function get(context) {
     })),
     items: writing.map((post) => ({
       title: post.data.title,
-      publishDate: post.data.publishDate,
+      pubDate: post.data.pubDate,
       description:
         post.data.description || post.data.excerpt || post.data.content || '',
       customData: `<language>en-GB</language>`,

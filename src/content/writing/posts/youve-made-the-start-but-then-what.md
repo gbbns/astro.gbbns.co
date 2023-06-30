@@ -4,7 +4,7 @@ tags: []
 published: false
 title: "You've made a start, but then what?"
 date: '2022-12-14T15:09:23Z'
-publishDate: '2022-12-14T15:09:23Z'
+pubDate: '2022-12-14T15:09:23Z'
 description: ""
 type: "article"
 author: "Chris Gibbons"
