@@ -7,7 +7,6 @@ const writingCollection = defineCollection({
     title: z.string(),
     publishDate: z.date(),
     author: z.string().default('Anonymous'),
-    slug: z.string().url(),
   }),
 })
 
@@ -17,7 +16,6 @@ const weeknotesCollection = defineCollection({
     title: z.string(),
     publishDate: z.date(),
     author: z.string().default('Anonymous'),
-    slug: z.string().url(),
   }),
 })
 // 3. Export a single `collections` object to register your collection(s)
