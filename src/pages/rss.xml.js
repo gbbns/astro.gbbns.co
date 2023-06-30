@@ -12,7 +12,8 @@ export async function get(context) {
     items: weeknotes.map((post) => ({
       title: post.data.title,
       publishDate: post.data.publishDate,
-      description: post.data.description,
+      description:
+        post.data.description || post.data.excerpt || post.data.content || '',
       customData: `<language>en-GB</language>`,
       // Compute RSS link from post `slug`
       // This example assumes all posts are rendered as `/blog/[slug]` routes
@@ -21,7 +22,8 @@ export async function get(context) {
     items: writing.map((post) => ({
       title: post.data.title,
       publishDate: post.data.publishDate,
-      description: post.data.description,
+      description:
+        post.data.description || post.data.excerpt || post.data.content || '',
       customData: `<language>en-GB</language>`,
       // Compute RSS link from post `slug`
       // This example assumes all posts are rendered as `/writing/[slug]` routes
