@@ -28,5 +28,13 @@
     grid-area: content;
     grid-template-columns: 1fr;
     justify-content: start;
+
+    .h-list__item {
+      flex: 1 1 100%;
+    }
+
+    .h-list__item + .h-list__item {
+      padding-left: 0;
+    }
   }
 }
