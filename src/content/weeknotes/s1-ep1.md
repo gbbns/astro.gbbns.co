@@ -1,9 +1,11 @@
 ---
+id: "sp1-ep1.md"
 categories: "weeknotes"
 published: true
 title: "Weeknotes: s1 ep1"
-date: '2022-12-05T17:14:19+00:00'
-pubDate: '2022-12-05T17:14:19+00:00'
+date: 2022-12-05T17:14:19+00:00
+pubDate: 2022-12-05T17:14:19+00:00
+publishDate: 2023-06-30T12:30:00+00:00
 description: ""
 author: "Chris Gibbons"
 slug: "s1-ep1"

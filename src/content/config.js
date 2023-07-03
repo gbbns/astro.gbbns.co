@@ -4,18 +4,22 @@ import { z, defineCollection } from 'astro:content'
 const writingCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
+    id: z.string(),
     title: z.string(),
-    pubDate: z.string(),
-    author: z.string().default('Anonymous'),
+    pubDate: z.date(),
+    description: z.string(),
+    author: z.string(),
   }),
 })
 
 const weeknotesCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
+    id: z.string(),
     title: z.string(),
-    pubDate: z.string(),
-    author: z.string().default('Anonymous'),
+    pubDate: z.date(),
+    description: z.string(),
+    author: z.string(),
   }),
 })
 // 3. Export a single `collections` object to register your collection(s)

@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 
 import { format } from 'date-fns'
 
-let allPosts = await Astro.glob('../pages/writing/posts/*.md')
+let allPosts = await Astro.glob('../content/writing/posts/*.md')
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.date).valueOf() -

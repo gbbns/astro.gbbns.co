@@ -1,10 +1,12 @@
 ---
+id: "its-good-to-talk.md"
 categories: "personal"
 tags: ["work", "personal", "motivation"]
 published: true
 title: "It's good to talk"
-date: '2022-04-04T05:20:26Z'
-pubDate: '2022-04-04T05:20:26Z'
+date: 2022-04-04T05:20:26Z
+pubDate: 2022-04-04T05:20:26Z
+publishDate: 2022-04-04T05:20:26Z
 description: ""
 type: "article"
 author: "Chris Gibbons"
