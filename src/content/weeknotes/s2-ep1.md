@@ -12,7 +12,7 @@ slug: "s2-ep1"
 layout: ../../layouts/BlogPostLayout.astro
 ---
 
-Welcome. Firstly I feel that I need to apologise - I’ve been very tardy in writing my notes this year and for good reason. A lot has changed since we last spoke, hopefully, in this bumper edition of week notes (more like half-year notes), it will all become clear. so grab yourself a drink and let’s settle in.
+Welcome. Firstly I feel that I need to apologise - I’ve been very tardy in writing my notes this year and for good reason. A lot has changed since we last spoke, hopefully, in this bumper edition of week notes (more like half-year notes), it will all become clear. So grab yourself a drink and let’s settle in.
 
 ----
 
