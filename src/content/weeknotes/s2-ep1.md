@@ -12,11 +12,11 @@ slug: "s2-ep1"
 layout: ../../layouts/BlogPostLayout.astro
 ---
 
-Welcome. Firstly I feel that need to apologise - I’ve been very tardy in writing my notes this year, and for good reason. A lot has changed since we last spoke, hopefully, in this bumper edition of week notes (more like half-year notes), it will all become clear. so grab yourself a drink and let's settle in.
+Welcome. Firstly I feel that I need to apologise - I’ve been very tardy in writing my notes this year and for good reason. A lot has changed since we last spoke, hopefully, in this bumper edition of week notes (more like half-year notes), it will all become clear. so grab yourself a drink and let’s settle in.
 
 ----
 
-## Whats happened then, pal?
+## What's happened then, pal?
 
 To go into detail would be too much, so let's have a quick-fire version:
 
@@ -31,9 +31,9 @@ To go into detail would be too much, so let's have a quick-fire version:
 
 Thankfully, I've not had to do much in the interview space over the last few years, but I'm finding the current trend of 5-6-7 stages (yes, that isn't a typo!) is the new normal, and it's fucking ridiculous. Calls with HR, calls with hiring managers, tech tests/live coding(!?), calls to discuss, calls with "heads of", calls with execs, calls with the office dog... Honestly, it's tiring, draining, slightly demeaning, and absolutely broken.
 
-My biggest gripe though, is how interviewers "_grade_" candidate's. Having been an interviewer in the past, I like to think that I can give a fairly unbiased view of this section.
+My biggest gripe though, is how interviewers "_grade_" candidates. Having been an interviewer in the past, I like to think that I can give a fairly unbiased view of this section.
 
-First &amp; second-round interviews usually assess a candidate's values/competencies, aside from technical. This, for me at least, is perhaps _the_ most important thing to asses in a candidate. It gives you the "*dick-head filter*", but also shows the candidate's attitude, leadership and mentoring approaches, which are all things you just can't teach people. It's that lived, real-world experience, and this is super important.
+First &amp; second-round interviews usually assess a candidate's values/competencies, aside from technical. This, for me at least, is perhaps _the_ most important thing to assess in a candidate. It gives you the "*dick-head filter*", but also shows the candidate's attitude, leadership and mentoring approaches, which are all things you just can't teach people. It's that lived, real-world experience, and this is super important.
 
 The next stages usually dive into the technical via tech-task (take home, or live coding). This is the area where if a candidate of any seniority is maybe lacking, they can relatively quickly re-skill, after all, they have more than likely been in a leadership and less hands-on position...
 
