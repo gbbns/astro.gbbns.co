@@ -2,7 +2,7 @@
 id: "sp2-ep1.md"
 categories: "weeknotes"
 published: true
-title: "Weeknotes: s2 ep1"
+title: "Weeknotes: Season 2: Episode 1"
 date: 2023-06-30T10:00:00+00:00
 pubDate: 2023-06-30T12:30:00+00:00
 publishDate: 2023-06-30T12:30:00+00:00
