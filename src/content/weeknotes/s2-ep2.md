@@ -20,6 +20,8 @@ Hello and welcome to episode 2 of this year&rsquo;s &ldquo;week notes&rdquo; ser
 
 👻 When did Ghosting become common practice? This really pisses me off, and recruiters (internal and external!) really should know better. I had one person hound me for a chat, we eventually managed to speak, then the fucker just ignores me, **repeatedly**. Bad form. ❎
 
+(Also, I&lsquo;m not saying I am without blame on this too, all I will say is that when you're set open to work it is very easy to be overwhelmed with messages, sometimes I miss messages from folks, and it can take me a while to reply. In this instance I'm classing ghosting as once you've already made contact with a company/recruiter, for it to then drop off)
+
 📣 Let&rsquo;s talk feedback. Give it. Don&rsquo;t fuck about giving the candidate something tangible that they can action for future opportunities.
 
 👨🏼‍🎓 I know that not every candidate is going to tick the right boxes, and through gritted teeth, I get it. I say gritted teeth as it feels at times that the criteria used to grade candidates is skewed, whereby someone who can score highly on values, apparently isn&rsquo;t the right fit as _they&rsquo;ve not coded for **8hrs a day**, for the **last 6 months**_, go figure 🤷🏼‍♂️
