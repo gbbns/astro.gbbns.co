@@ -4,9 +4,9 @@ categories: "personal"
 tags: ["work", "personal", "motivation"]
 published: true
 title: "Post-redundacy thoughts..."
-date: 2022-04-04T05:20:26Z
-pubDate: 2022-04-04T05:20:26Z
-publishDate: 2022-04-04T05:20:26Z
+date: 2023-10-10T07:30:00Z
+pubDate: 2023-10-10T07:30:00Z
+publishDate: 2023-10-10T07:30:00Z
 description: ""
 type: "article"
 author: "Chris Gibbons"
