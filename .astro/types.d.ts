@@ -20,26 +20,14 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
 
-	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
-	/**
-	 * @deprecated
-	 * `astro:content` no longer provide `image()`.
-	 *
-	 * Please use it through `schema`, like such:
-	 * ```ts
-	 * import { defineCollection, z } from "astro:content";
-	 *
-	 * defineCollection({
-	 *   schema: ({ image }) =>
-	 *     z.object({
-	 *       image: image(),
-	 *     }),
-	 * });
-	 * ```
-	 */
-	export const image: never;
+	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
+
+	export type CollectionKey = keyof AnyEntryMap;
+	export type CollectionEntry<C extends CollectionKey> = Flatten<AnyEntryMap[C]>;
+
+	export type ContentCollectionKey = keyof ContentEntryMap;
+	export type DataCollectionKey = keyof DataEntryMap;
 
 	// This needs to be in sync with ImageMetadata
 	export type ImageFunction = () => import('astro/zod').ZodObject<{
@@ -54,19 +42,17 @@ declare module 'astro:content' {
 				import('astro/zod').ZodLiteral<'tiff'>,
 				import('astro/zod').ZodLiteral<'webp'>,
 				import('astro/zod').ZodLiteral<'gif'>,
-				import('astro/zod').ZodLiteral<'svg'>
+				import('astro/zod').ZodLiteral<'svg'>,
+				import('astro/zod').ZodLiteral<'avif'>,
 			]
 		>;
 	}>;
 
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
-		| import('astro/zod').ZodUnion<import('astro/zod').AnyZodObject[]>
+		| import('astro/zod').ZodUnion<[BaseSchemaWithoutEffects, ...BaseSchemaWithoutEffects[]]>
 		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodIntersection<
-				import('astro/zod').AnyZodObject,
-				import('astro/zod').AnyZodObject
-		  >;
+		| import('astro/zod').ZodIntersection<BaseSchemaWithoutEffects, BaseSchemaWithoutEffects>;
 
 	type BaseSchema =
 		| BaseSchemaWithoutEffects
@@ -97,7 +83,7 @@ declare module 'astro:content' {
 
 	export function getEntryBySlug<
 		C extends keyof ContentEntryMap,
-		E extends ValidContentEntrySlug<C> | (string & {})
+		E extends ValidContentEntrySlug<C> | (string & {}),
 	>(
 		collection: C,
 		// Note that this has to accept a regular string too, for SSR
@@ -122,7 +108,7 @@ declare module 'astro:content' {
 
 	export function getEntry<
 		C extends keyof ContentEntryMap,
-		E extends ValidContentEntrySlug<C> | (string & {})
+		E extends ValidContentEntrySlug<C> | (string & {}),
 	>(entry: {
 		collection: C;
 		slug: E;
@@ -131,7 +117,7 @@ declare module 'astro:content' {
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getEntry<
 		C extends keyof DataEntryMap,
-		E extends keyof DataEntryMap[C] | (string & {})
+		E extends keyof DataEntryMap[C] | (string & {}),
 	>(entry: {
 		collection: C;
 		id: E;
@@ -140,7 +126,7 @@ declare module 'astro:content' {
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getEntry<
 		C extends keyof ContentEntryMap,
-		E extends ValidContentEntrySlug<C> | (string & {})
+		E extends ValidContentEntrySlug<C> | (string & {}),
 	>(
 		collection: C,
 		slug: E
@@ -149,7 +135,7 @@ declare module 'astro:content' {
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getEntry<
 		C extends keyof DataEntryMap,
-		E extends keyof DataEntryMap[C] | (string & {})
+		E extends keyof DataEntryMap[C] | (string & {}),
 	>(
 		collection: C,
 		id: E
@@ -204,21 +190,21 @@ declare module 'astro:content' {
   slug: "s1-ep1";
   body: string;
   collection: "weeknotes";
-  data: any
+  data: InferEntrySchema<"weeknotes">
 } & { render(): Render[".md"] };
 "s2-ep1.md": {
 	id: "s2-ep1.md";
   slug: "s2-ep1";
   body: string;
   collection: "weeknotes";
-  data: any
+  data: InferEntrySchema<"weeknotes">
 } & { render(): Render[".md"] };
 "s2-ep2.md": {
 	id: "s2-ep2.md";
   slug: "s2-ep2";
   body: string;
   collection: "weeknotes";
-  data: any
+  data: InferEntrySchema<"weeknotes">
 } & { render(): Render[".md"] };
 };
 "writing": {
@@ -227,14 +213,21 @@ declare module 'astro:content' {
   slug: "its-good-to-talk";
   body: string;
   collection: "writing";
-  data: any
+  data: InferEntrySchema<"writing">
+} & { render(): Render[".md"] };
+"posts/post-redundancy-thoughts.md": {
+	id: "posts/post-redundancy-thoughts.md";
+  slug: "post-redundancy-thoughts";
+  body: string;
+  collection: "writing";
+  data: InferEntrySchema<"writing">
 } & { render(): Render[".md"] };
 "posts/youve-made-the-start-but-then-what.md": {
 	id: "posts/youve-made-the-start-but-then-what.md";
   slug: "youve-made-the-start-but-then-what";
   body: string;
   collection: "writing";
-  data: any
+  data: InferEntrySchema<"writing">
 } & { render(): Render[".md"] };
 };
 
@@ -246,5 +239,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config.js");
 }
