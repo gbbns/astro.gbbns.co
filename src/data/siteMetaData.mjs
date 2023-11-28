@@ -3,7 +3,7 @@ export const siteMetaData = {
   siteShortTitle: `Front-End and Accessibility, with a side of coffee and cake`,
   siteDescription: `Engineering Practice Lead, Front-End Developer, and Design Engineer based in Lancashire`,
   siteIntroTitle: `Hello, I'm Chris Gibbons.`,
-  siteHomePageIntroTitle: `Engineering Practice Lead, Front-End Developer, Design Engineer, Amateur cyclist, Photography enthusiast, Wanna be writer and Occasional baker.`,
+  siteHomePageIntroTitle: `Design Engineer, Front-End Developer, Engineering Practice Lead, Amateur cyclist, Photography enthusiast, Wanna be writer and Occasional baker.`,
   siteTagline: `I’m a Design Engineer and principal UI/front end developer from the UK.`,
   siteUrl: `https://www.gbbns.co`,
   siteUrlSlug: `gbbns.co`,
