@@ -222,6 +222,13 @@ declare module 'astro:content' {
   collection: "writing";
   data: InferEntrySchema<"writing">
 } & { render(): Render[".md"] };
+"posts/thank-fuck-23-is-nearly-over.md": {
+	id: "posts/thank-fuck-23-is-nearly-over.md";
+  slug: "thank-fuck-23-is-nearly-over";
+  body: string;
+  collection: "writing";
+  data: InferEntrySchema<"writing">
+} & { render(): Render[".md"] };
 "posts/youve-made-the-start-but-then-what.md": {
 	id: "posts/youve-made-the-start-but-then-what.md";
   slug: "youve-made-the-start-but-then-what";
