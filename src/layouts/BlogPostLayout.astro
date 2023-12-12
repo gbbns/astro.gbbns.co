@@ -7,12 +7,14 @@ import { format } from 'date-fns'
 import readingTime from 'reading-time'
 
 import '../styles/main.scss'
-export interface Props {
-  title: string
-}
+// export interface Props {
+//   title: string
+//   content: object
+// }
 
 const { title } = Astro.props
 const { content } = Astro.props
+
 const stats = readingTime(Astro.props.rawContent())
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)

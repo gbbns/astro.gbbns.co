@@ -60,7 +60,7 @@ Hopefully, now I&rsquo;m back on them they can help again, only this time I will
 
 ## Plans for 2024?
 
-As I aluded too earlier, the notes I wrote all the way back in January have helped provide me with a little clarity on a direction I want to persue.
+As I alluded too earlier, the notes I wrote all the way back in January have helped provide me with a little clarity on a direction I want to persue.
 
 ### What do I want to be doing?
 
