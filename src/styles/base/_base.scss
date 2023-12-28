@@ -58,7 +58,7 @@ body {
 
   @media (min-width: 40em) {
     padding: 0;
-    width: calc(100vw - 10vw);
+    max-width: calc(75vw - 10vw);
   }
 }
 
