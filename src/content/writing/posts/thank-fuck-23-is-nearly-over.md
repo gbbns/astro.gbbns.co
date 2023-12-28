@@ -2,8 +2,8 @@
 id: "thank-fuck-23-is-nearly-over.md"
 categories: "personal"
 tags: ["work", "personal", "motivation"]
-published: false
-title: "Thank fuck &rsquo;23 is nearly over."
+published: true
+title: "Thank fuck '23 is nearly over."
 date: 2023-12-01T07:30:00Z
 pubDate: 2023-12-01T07:30:00Z
 publishDate: 2023-12-01T07:30:00Z
